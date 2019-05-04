@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace screensaver
@@ -28,6 +25,10 @@ namespace screensaver
 
                     // preview
                     case "/p":
+                        MessageBox.Show("Sorry, preview is not available at this point.",
+                            "Snowfall Screensaver", 
+                            MessageBoxButtons.OK, 
+                            MessageBoxIcon.Exclamation);
                         break;
 
                     // configure
