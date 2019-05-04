@@ -23,6 +23,7 @@ namespace screensaver
                 {
                     // show
                     case "/s":
+                        ShowScreens();
                         break;
 
                     // preview

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Gravity.cs" />
     <Compile Include="MyScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +55,7 @@
     </Compile>
     <Compile Include="Screensaver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Snowball.cs" />
     <EmbeddedResource Include="MyScreen.resx">
       <DependentUpon>MyScreen.cs</DependentUpon>
     </EmbeddedResource>
