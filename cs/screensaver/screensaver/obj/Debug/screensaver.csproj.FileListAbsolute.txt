@@ -1,0 +1,10 @@
+E:\personal-projects\snowfall-screensaver\cs\screensaver\screensaver\bin\Debug\screensaver.exe.config
+E:\personal-projects\snowfall-screensaver\cs\screensaver\screensaver\bin\Debug\screensaver.exe
+E:\personal-projects\snowfall-screensaver\cs\screensaver\screensaver\bin\Debug\screensaver.pdb
+E:\personal-projects\snowfall-screensaver\cs\screensaver\screensaver\obj\Debug\screensaver.csprojAssemblyReference.cache
+E:\personal-projects\snowfall-screensaver\cs\screensaver\screensaver\obj\Debug\screensaver.Properties.Resources.resources
+E:\personal-projects\snowfall-screensaver\cs\screensaver\screensaver\obj\Debug\screensaver.csproj.GenerateResource.cache
+E:\personal-projects\snowfall-screensaver\cs\screensaver\screensaver\obj\Debug\screensaver.csproj.CoreCompileInputs.cache
+E:\personal-projects\snowfall-screensaver\cs\screensaver\screensaver\obj\Debug\screensaver.exe
+E:\personal-projects\snowfall-screensaver\cs\screensaver\screensaver\obj\Debug\screensaver.pdb
+E:\personal-projects\snowfall-screensaver\cs\screensaver\screensaver\obj\Debug\screensaver.MyScreen.resources
