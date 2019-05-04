@@ -19,6 +19,6 @@ A screensaver for Windows in C# with preview in JavaScript.
 
 3. Right click `screensaver.scr` and choose the `install` option.
 
-**Note**: You will see some pop-ups during this step. Just click the **OK** button. These pop-ups are just telling you that some of the features have not been developed yet.
+   **Note**: You will see some pop-ups during this step. Just click the **OK** button. These pop-ups are just telling you that some of the features have not been developed yet.
 
 4. You will be led to the configure window of Windows screensavers.
