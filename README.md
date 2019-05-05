@@ -15,7 +15,7 @@ A screensaver for Windows in C# with preview in JavaScript.
 
 1. `git clone` the repository to your computer.
 
-2. Under folder `cs`, find the screensaver execution file `screensaver.scr`.
+2. Under folder `cs`, find the screensaver executable file `screensaver.scr`.
 
 3. Right click `screensaver.scr` and choose the `install` option.
 
