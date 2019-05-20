@@ -10,13 +10,14 @@ namespace screensaver
     public partial class MyScreen : Form
     {
         [System.Runtime.InteropServices.DllImport("user32.dll")]
-        private static extern IntPtr SetParent(IntPtr child, IntPtr parent);
+        private static extern IntPtr SetParent(IntPtr hWndChild, IntPtr hWndNewParent);
         [System.Runtime.InteropServices.DllImport("user32.dll")]
-        private static extern int SetWindowLong(IntPtr window, int index, IntPtr windowLong);
+        private static extern int SetWindowLong(IntPtr hWnd, int nIndex, IntPtr dwNewLong);
         [System.Runtime.InteropServices.DllImport("user32.dll", SetLastError = true)]
-        private static extern int GetWindowLong(IntPtr window, int index);
+        private static extern int GetWindowLong(IntPtr hWnd, int nIndex);
         [System.Runtime.InteropServices.DllImport("user32.dll")]
-        private static extern bool GetClientRect(IntPtr window, out Rectangle lpRect);
+        private static extern bool GetClientRect(IntPtr hWnd, out Rectangle lpRect);
+        private bool isPreviewMode = false;
         private readonly int NUM = 300;
         private readonly int id;
         private Gravity grv = new Gravity();
@@ -43,6 +44,7 @@ namespace screensaver
             GetClientRect(previewHandle, out ParentRect);
             this.Size = ParentRect.Size;
             this.Location = new Point(0, 0);
+            this.isPreviewMode = true;
             wind = new Wind(ParentRect.Width, ParentRect.Height);
             Paint += new PaintEventHandler(MyScreen_Render);
             MouseMove += new MouseEventHandler(MyScreen_OnMouseMove);
@@ -73,12 +75,18 @@ namespace screensaver
 
         private void MyScreen_OnMouseMove(object sender, MouseEventArgs me)
         {
-            wind.Blow(new PointF(me.X, me.Y));
+            if (!this.isPreviewMode)
+            {
+                wind.Blow(new PointF(me.X, me.Y));
+            }
         }
 
         private void MyScreen_OnKeyPress(object sender, KeyPressEventArgs ke)
         {
-            Close();
+            if (!this.isPreviewMode)
+            {
+                Close();
+            }
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
