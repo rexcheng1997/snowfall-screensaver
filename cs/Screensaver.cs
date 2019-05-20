@@ -26,7 +26,7 @@ namespace screensaver
                     // preview
                     case "/p":
                         MyScreen preview = new MyScreen(new IntPtr(long.Parse(args[1])));
-                        preview.ShowDialog();
+                        Application.Run(preview);
                         break;
 
                     // configure
