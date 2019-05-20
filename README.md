@@ -1,6 +1,6 @@
 # Snowfall Screensaver
 A screensaver for Windows in C# with preview in JavaScript.  
-**Note**: The small-screen preview and configure window haven't been implemented yet, so there will be pop-ups when you try to do so. However, the full-screen preview is implemented.
+**Note**: The configure window haven't been implemented yet, so there will be pop-ups when you try to do so. The small-screen preview is just a black screen. For preview, click the `Preview` button on the installation dialog window.
 
 ### Requirements:
 
