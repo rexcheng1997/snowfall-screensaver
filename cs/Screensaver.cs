@@ -25,10 +25,8 @@ namespace screensaver
 
                     // preview
                     case "/p":
-                        MessageBox.Show("Sorry, preview is not available at this point.",
-                            "Snowfall Screensaver", 
-                            MessageBoxButtons.OK, 
-                            MessageBoxIcon.Exclamation);
+                        MyScreen preview = new MyScreen(new IntPtr(long.Parse(args[1])));
+                        preview.ShowDialog();
                         break;
 
                     // configure

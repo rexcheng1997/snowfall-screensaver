@@ -9,6 +9,14 @@ namespace screensaver
 {
     public partial class MyScreen : Form
     {
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        private static extern IntPtr SetParent(IntPtr child, IntPtr parent);
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        private static extern int SetWindowLong(IntPtr window, int index, IntPtr windowLong);
+        [System.Runtime.InteropServices.DllImport("user32.dll", SetLastError = true)]
+        private static extern int GetWindowLong(IntPtr window, int index);
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        private static extern bool GetClientRect(IntPtr window, out Rectangle lpRect);
         private readonly int NUM = 300;
         private readonly int id;
         private Gravity grv = new Gravity();
@@ -24,6 +32,17 @@ namespace screensaver
             Paint += new PaintEventHandler(MyScreen_Render);
             MouseMove += new MouseEventHandler(MyScreen_OnMouseMove);
             KeyPress += new KeyPressEventHandler(MyScreen_OnKeyPress);
+        }
+
+        public MyScreen(IntPtr previewHandle)
+        {
+            InitializeComponent();
+            SetParent(this.Handle, previewHandle);
+            SetWindowLong(this.Handle, -16, new IntPtr(GetWindowLong(this.Handle, -16) | 0x40000000));
+            Rectangle ParentRect;
+            GetClientRect(previewHandle, out ParentRect);
+            this.Size = ParentRect.Size;
+            this.Location = new Point(0, 0);
         }
 
         private void MyScreen_Load(object sender, EventArgs e)
