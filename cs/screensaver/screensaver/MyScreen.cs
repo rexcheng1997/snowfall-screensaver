@@ -43,6 +43,10 @@ namespace screensaver
             GetClientRect(previewHandle, out ParentRect);
             this.Size = ParentRect.Size;
             this.Location = new Point(0, 0);
+            wind = new Wind(ParentRect.Width, ParentRect.Height);
+            Paint += new PaintEventHandler(MyScreen_Render);
+            MouseMove += new MouseEventHandler(MyScreen_OnMouseMove);
+            KeyPress += new KeyPressEventHandler(MyScreen_OnKeyPress);
         }
 
         private void MyScreen_Load(object sender, EventArgs e)
